@@ -1,8 +1,9 @@
 const net = require('net');
 
-/**
- * Establishes connection with the game server
- */
+
+
+
+// Establishes connection with the game server
 const connect = function() {
   const conn = net.createConnection({ 
     host: 'localhost',
@@ -13,6 +14,19 @@ const connect = function() {
   conn.on("connect", () => {
     console.log("Successful connection!")
     conn.write('Name: ACP');
+    /*conn.write('Move: up');
+    setTimeout ( () => {
+      conn.write('Move: up');
+    }, 250)
+    setTimeout ( () => {
+      conn.write('Move: up');
+    }, 500)
+    setTimeout ( () => {
+      conn.write('Move: up');
+    }, 750)
+    */
+  
+    
   })
   conn.on("data", (data) => {
     console.log(data);
