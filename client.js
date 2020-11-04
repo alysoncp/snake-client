@@ -14,17 +14,7 @@ const connect = function() {
   conn.on("connect", () => {
     console.log("Successful connection!")
     conn.write('Name: ACP');
-    /*conn.write('Move: up');
-    setTimeout ( () => {
-      conn.write('Move: up');
-    }, 250)
-    setTimeout ( () => {
-      conn.write('Move: up');
-    }, 500)
-    setTimeout ( () => {
-      conn.write('Move: up');
-    }, 750)
-    */
+
   
     
   })

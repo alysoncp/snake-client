@@ -18,21 +18,14 @@ const setupInput = function(conn) {
       connection.write("Move: down");
     } else if (data === 'd'){
       connection.write("Move: right");
+    } else if (data === 'x'){
+      connection.write("Say: YAY!");
+    } else if (data === 'c'){
+      connection.write("Say: DOH!");
     }
   });
   return stdin;
 }
 
-    /*;
-    setTimeout ( () => {
-      conn.write('Move: up');
-    }, 250)
-    setTimeout ( () => {
-      conn.write('Move: up');
-    }, 500)
-    setTimeout ( () => {
-      conn.write('Move: up');
-    }, 750)
-    */
 
 module.exports = setupInput;
